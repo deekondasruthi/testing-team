@@ -1,6 +1,5 @@
-package utilities;
+package dataProvider;
 
 public class DataProvider {
-	
 
 }

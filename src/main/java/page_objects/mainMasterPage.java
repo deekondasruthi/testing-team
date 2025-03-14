@@ -12,18 +12,24 @@ public class mainMasterPage extends BaseClass{
 	Action_class action=new Action_class();
 	
 	@FindBy(xpath = "//span[text()='Create']")
-	private WebElement crtHoli;
+	private WebElement clkHoli;
+	@FindBy(xpath = "//li[text()='Government Holiday ']")
+	private WebElement holi; 
+	
 	
 	public mainMasterPage() {
 		
 		PageFactory.initElements(getDriver(),this);
 	}
 	
-	
-	
-public void CreateHoli() {
-		action.mouseHoverByJavaScript(getDriver(), crtHoli);
-		action.click(getDriver(), crtHoli);
+	public HolidayPage  validateHoliBtn() {
+		action.explicitWait(getDriver(), holi, 3);
+		action.click(getDriver(), holi);
+		return new HolidayPage();
+		
 	}
+	
 
+	
 }
+

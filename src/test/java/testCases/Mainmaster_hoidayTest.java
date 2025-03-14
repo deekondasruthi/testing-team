@@ -31,11 +31,12 @@ public class Mainmaster_hoidayTest extends BaseClass{
 
         // Wait for HomePage to load
         Thread.sleep(3000);
-
+  
         // Navigate to Main Master Page
         masterPage = homePage.mainMaster();
-        
-        holidayPage=homePage.toValidateHolibtn();
+        holidayPage=masterPage.validateHoliBtn();
+        Thread.sleep(3000);
+       
         
        
 		}
@@ -44,7 +45,7 @@ public class Mainmaster_hoidayTest extends BaseClass{
 			getDriver().quit();
 		}
 	 @Test
-	 public void validateTheHoliBtn() throws InterruptedException {
+	 public void validateTheHoliBtnTest() throws InterruptedException {
 		
 		String CurrentUrl= holidayPage.currenturl();
 		String ExpectedUrl="https://staging-mmsadmin.basispay.in/sidenav/governmentholiday";
