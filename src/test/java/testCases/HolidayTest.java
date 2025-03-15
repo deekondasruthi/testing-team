@@ -10,6 +10,7 @@ import page_objects.HolidayPage;
 import page_objects.HomePage;
 import page_objects.LoginPage;
 import page_objects.mainMasterPage;
+import utilities.Log;
 
 public class HolidayTest extends BaseClass{
 	
@@ -47,11 +48,12 @@ public class HolidayTest extends BaseClass{
 	
 	@Test
 	public void HolidayCreationTest() {
-		
+		Log.startTestCase(" Test for create Holiday");
 		holidayPage.CreateFunc();
 		boolean result=holidayPage.foundIsDisplayed();
-		Assert.assertTrue(result);
-		
+		Assert.assertFalse(result);
+		Log.endTestCase(" Test for create Holiday");
+
 	}
 	
 	

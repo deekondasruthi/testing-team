@@ -2,10 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<listeners><listener class-name="utilities.ListenerClass"></listener></listeners>
-  <test thread-count="5" name="basic tests" parallel="true">
+  <test  name="basic tests" >
     <classes>
       <class name="testCases.LoginTest"/>
       <class name="testCases.HolidayTest"></class>
+      <class name="testCases.Mainmaster_hoidayTest"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

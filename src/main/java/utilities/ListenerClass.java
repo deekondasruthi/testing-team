@@ -7,37 +7,46 @@ import java.io.File;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+
 import action_driver.Action_class;
 import baseClass.BaseClass;
 
-public class ListenerClass  implements ITestListener {
+public class ListenerClass extends Reporter implements ITestListener  {
 	
 	Action_class action =new Action_class();
 	@Override
     public void onTestStart(ITestResult result) {
-        System.out.println("Test started: " + result.getName());
+		test = extent.createTest(result.getName());
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("Test passed: " + result.getName());
+        if(result.getStatus()==ITestResult.SUCCESS) {
+        	test.log(Status.PASS, "Pass Test case is: " + result.getName());
+        }
     }
 
    
     	@Override
     	public void onTestFailure(ITestResult result) {
-    	    if (result.getStatus() == ITestResult.FAILURE) {
+    		if (result.getStatus() == ITestResult.FAILURE) {
     	        try {
     	            // Ensure WebDriver is valid
     	            if (BaseClass.getDriver() != null) {
     	                // Capture screenshot
-    	                File imgPath = action.screenShot(BaseClass.getDriver(), result.getName());
-    	                System.out.println("Screenshot captured for failed test: " + imgPath.getAbsolutePath());
+    	                String imgPath = action.screenShot(BaseClass.getDriver(), result.getName());
+    	                System.out.println("Screenshot captured for failed test: " + imgPath);
+
+    	                // Log failure and attach screenshot to the Extent Report
+    	                test.fail("Screenshot is attached", 
+    	                        MediaEntityBuilder.createScreenCaptureFromPath(imgPath).build());
     	            } else {
     	                System.err.println("WebDriver instance is null. Unable to capture screenshot.");
     	            }
     	        } catch (Exception e) {
-    	            System.err.println("Error while capturing screenshot: " + e.getMessage());
+    	            System.err.println("Error while capturing screenshot or attaching to the report: " + e.getMessage());
     	        }
     	    }
     	}
@@ -46,6 +55,8 @@ public class ListenerClass  implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        System.out.println("Test skipped: " + result.getName());
+    	if (result.getStatus() == ITestResult.SKIP) {
+			test.log(Status.SKIP, "Skipped Test case is: " + result.getName());
+		}
     }
 }

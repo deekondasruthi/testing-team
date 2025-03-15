@@ -45,7 +45,7 @@ public interface Action_Interface {
 	public void explicitWait(WebDriver driver, WebElement element, int timeOut);
 	public void pageLoadTimeOut(WebDriver driver, int timeOut);
 	public void ScriptTimeOut(WebDriver driver, int timeOut);
-	public File screenShot(WebDriver driver, String filename);
+	public String screenShot(WebDriver driver, String filename);
 	public String getCurrentTime();
 	public boolean clickAndHold(WebDriver driver,WebElement ele);
 	public boolean doubleClick(WebDriver driver,WebElement ele);

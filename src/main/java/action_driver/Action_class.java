@@ -917,25 +917,34 @@ public class Action_class extends BaseClass implements Action_Interface{
 	}
 
 	@Override
-	public File screenShot(WebDriver driver, String filename) {
+	public String screenShot(WebDriver driver, String filename) {
 
 		String dateName = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
 
-	    TakesScreenshot takesScreenShot=(TakesScreenshot)driver;
-	    File Source=takesScreenShot.getScreenshotAs(OutputType.FILE);
+	    // Take a screenshot
+	    TakesScreenshot takesScreenShot = (TakesScreenshot) driver;
+	    File source = takesScreenShot.getScreenshotAs(OutputType.FILE);
+
 	    // Define the destination file path
 	    File dest = new File(System.getProperty("user.dir") + "\\Screenshots\\" + filename + "_" + dateName + ".png");
 
 	    try {
+	        // Ensure the Screenshots directory exists
+	        File directory = new File(System.getProperty("user.dir") + "\\Screenshots\\");
+	        if (!directory.exists()) {
+	            directory.mkdirs();
+	        }
+
 	        // Copy the screenshot file to the destination
-	        FileHandler.copy(Source, dest);
+	        FileHandler.copy(source, dest);
 	        System.out.println("Screenshot captured and saved at: " + dest.getAbsolutePath());
 	    } catch (IOException e) {
 	        // Log any IO exceptions
-	        System.out.println("Failed to save the screenshot: " + e.getMessage());
+	        System.err.println("Failed to save the screenshot: " + e.getMessage());
 	    }
 
-	    return dest; // Return the destination file
+	    // Return the absolute path of the destination file as a String
+	    return dest.getAbsolutePath();
 	}
 
 	

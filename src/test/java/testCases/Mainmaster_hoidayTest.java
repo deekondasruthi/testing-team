@@ -10,6 +10,7 @@ import page_objects.HolidayPage;
 import page_objects.HomePage;
 import page_objects.LoginPage;
 import page_objects.mainMasterPage;
+import utilities.Log;
 
 public class Mainmaster_hoidayTest extends BaseClass{
 	
@@ -46,12 +47,12 @@ public class Mainmaster_hoidayTest extends BaseClass{
 		}
 	 @Test
 	 public void validateTheHoliBtnTest() throws InterruptedException {
-		
+		Log.startTestCase("To check the Holiday button navigation");
 		String CurrentUrl= holidayPage.currenturl();
 		String ExpectedUrl="https://staging-mmsadmin.basispay.in/sidenav/governmentholiday";
 		Thread.sleep(3000);
 		Assert.assertEquals(CurrentUrl, ExpectedUrl,"Navigation to Main Master Page failed: URLs do not match. ");
-		 
+		Log.endTestCase("To check the Holiday button navigation");
 		 
 	 }
 	
