@@ -44,4 +44,6 @@ public class HolidayPage extends BaseClass {
 		
 		return action.isDisplayed(getDriver(), txt);
 	}
+	
+	
 }

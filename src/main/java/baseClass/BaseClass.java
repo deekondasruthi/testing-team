@@ -19,7 +19,7 @@ public class BaseClass {
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
 
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 
 		return driver.get();		
 

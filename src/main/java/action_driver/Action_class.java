@@ -15,6 +15,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
@@ -916,19 +917,18 @@ public class Action_class extends BaseClass implements Action_Interface{
 	}
 
 	@Override
-	public File screenShot(WebDriver driver, String filename, WebElement ele) {
+	public File screenShot(WebDriver driver, String filename) {
 
 		String dateName = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
 
-	    // Capture screenshot of the WebElement
-	    File src = ele.getScreenshotAs(OutputType.FILE);
-
+	    TakesScreenshot takesScreenShot=(TakesScreenshot)driver;
+	    File Source=takesScreenShot.getScreenshotAs(OutputType.FILE);
 	    // Define the destination file path
 	    File dest = new File(System.getProperty("user.dir") + "\\Screenshots\\" + filename + "_" + dateName + ".png");
 
 	    try {
 	        // Copy the screenshot file to the destination
-	        FileHandler.copy(src, dest);
+	        FileHandler.copy(Source, dest);
 	        System.out.println("Screenshot captured and saved at: " + dest.getAbsolutePath());
 	    } catch (IOException e) {
 	        // Log any IO exceptions

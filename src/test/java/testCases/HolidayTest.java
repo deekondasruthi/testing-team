@@ -12,6 +12,7 @@ import page_objects.LoginPage;
 import page_objects.mainMasterPage;
 
 public class HolidayTest extends BaseClass{
+	
 	LoginPage loginPage;
 
 	HomePage homePage;
@@ -21,7 +22,9 @@ public class HolidayTest extends BaseClass{
 	HolidayPage holidayPage;
 
 	@BeforeMethod()
+	
 	public void setup() throws InterruptedException {
+		
 		launchApp("chrome");
 		loginPage = new LoginPage();
 		loginPage.Email("majeeth.h@babujiventures.in");
@@ -44,12 +47,16 @@ public class HolidayTest extends BaseClass{
 	
 	@Test
 	public void HolidayCreationTest() {
+		
 		holidayPage.CreateFunc();
 		boolean result=holidayPage.foundIsDisplayed();
 		Assert.assertTrue(result);
 		
 	}
+	
+	
 	@AfterMethod()
+	
 	public void tearDown() {
 		getDriver().quit();
 	}
