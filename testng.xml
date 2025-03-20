@@ -7,10 +7,9 @@
       <class name="testCases.LoginTest"/>
       <class name="testCases.HolidayTest"></class>
       <class name="testCases.Mainmaster_hoidayTest"></class>
-<<<<<<< HEAD
+
       <class name="testCases.EmailConfigurationTest"/>
-=======
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

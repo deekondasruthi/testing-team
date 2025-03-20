@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite (0)]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="utilities.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="basic tests(failed)" verbose="0">
+    <classes>
+      <class name="testCases.Mainmaster_hoidayTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="CreateReport"/>
+          <include name="validateTheHoliBtnTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.Mainmaster_hoidayTest -->
+      <class name="testCases.HolidayTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="SearchFuncTest"/>
+          <include name="CreateReport"/>
+        </methods>
+      </class> <!-- testCases.HolidayTest -->
+    </classes>
+  </test> <!-- basic tests(failed) -->
+</suite> <!-- Failed suite [Suite (0)] -->

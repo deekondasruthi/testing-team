@@ -4,10 +4,9 @@
   <test thread-count="5" name="Regression test">
     <classes>
       <class name="testCases.LoginTest"/>
-<<<<<<< HEAD
+
        <class name="testCases.HolidayTest"></class>
-=======
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
+
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
