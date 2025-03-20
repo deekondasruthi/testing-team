@@ -45,19 +45,11 @@ public class Mainmaster_hoidayTest extends BaseClass{
 		public void tearDown() {
 			getDriver().quit();
 		}
-<<<<<<< HEAD
 	 @Test(retryAnalyzer = utilities.Retry.class)
 	 public void validateTheHoliBtnTest() throws InterruptedException {
 		Log.startTestCase("To check the Holiday button navigation");
 		String CurrentUrl= holidayPage.currenturl();
 		String ExpectedUrl="https://staging-mmsadmin.basispay.in/sidenav/governmentholidy";
-=======
-	 @Test
-	 public void validateTheHoliBtnTest() throws InterruptedException {
-		Log.startTestCase("To check the Holiday button navigation");
-		String CurrentUrl= holidayPage.currenturl();
-		String ExpectedUrl="https://staging-mmsadmin.basispay.in/sidenav/governmentholiday";
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 		Thread.sleep(3000);
 		Assert.assertEquals(CurrentUrl, ExpectedUrl,"Navigation to Main Master Page failed: URLs do not match. ");
 		Log.endTestCase("To check the Holiday button navigation");

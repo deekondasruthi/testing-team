@@ -984,7 +984,6 @@ public class Action_class extends BaseClass implements Action_Interface{
 	        System.out.println("Failed to enter text into the element: " + e.getMessage());
 	    }
 	}
-<<<<<<< HEAD
 	@Override
     public String getText(WebElement ele) {
 		try {
@@ -996,8 +995,4 @@ public class Action_class extends BaseClass implements Action_Interface{
 	        return "Error: Unable to retrieve text!";
 	    }		
     }
-=======
-
-
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 }

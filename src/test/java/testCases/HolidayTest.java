@@ -6,23 +6,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import baseClass.BaseClass;
-<<<<<<< HEAD
 import dataProvider.DataProviderClass;
-=======
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 import page_objects.HolidayPage;
 import page_objects.HomePage;
 import page_objects.LoginPage;
 import page_objects.mainMasterPage;
 import utilities.Log;
 
-<<<<<<< HEAD
 public class HolidayTest extends BaseClass {
 
-=======
-public class HolidayTest extends BaseClass{
-	
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 	LoginPage loginPage;
 
 	HomePage homePage;
@@ -32,15 +24,9 @@ public class HolidayTest extends BaseClass{
 	HolidayPage holidayPage;
 
 	@BeforeMethod()
-<<<<<<< HEAD
 
 	public void setup() throws InterruptedException {
 
-=======
-	
-	public void setup() throws InterruptedException {
-		
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 		launchApp("chrome");
 		loginPage = new LoginPage();
 		loginPage.Email("majeeth.h@babujiventures.in");
@@ -52,7 +38,6 @@ public class HolidayTest extends BaseClass{
 
 		// Navigate to Main Master Page
 		masterPage = homePage.mainMaster();
-<<<<<<< HEAD
 		holidayPage = masterPage.validateHoliBtn();
 		holidayPage = new HolidayPage();
 
@@ -70,7 +55,7 @@ public class HolidayTest extends BaseClass{
 
 	}
 
-	@Test(dataProvider = "Holidaysearchdata",dataProviderClass = DataProviderClass.class)
+	@Test(dataProvider = "")
 	public void SearchFuncTest(String searchholi) {
 
 		boolean result = holidayPage.search(searchholi);
@@ -83,34 +68,4 @@ public class HolidayTest extends BaseClass{
 		getDriver().quit();
 	}
 
-=======
-		holidayPage=masterPage.validateHoliBtn();
-		holidayPage=new HolidayPage();
-		
-		Thread.sleep(3000);
-
-
-
-	}
-	
-	@Test
-	public void HolidayCreationTest() {
-		Log.startTestCase(" Test for create Holiday");
-		holidayPage.CreateFunc();
-		boolean result=holidayPage.foundIsDisplayed();
-		Assert.assertFalse(result);
-		Log.endTestCase(" Test for create Holiday");
-
-	}
-	
-	
-	@AfterMethod()
-	
-	public void tearDown() {
-		getDriver().quit();
-	}
-	
-	
-	
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 }

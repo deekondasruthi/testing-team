@@ -1,6 +1,5 @@
 package utilities;
 
-<<<<<<< HEAD
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -65,8 +64,4 @@ public class NewExcelLibrary {
 	    }
 }
 
-=======
-public class NewExcelLibrary {
 
-}
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
