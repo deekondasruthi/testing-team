@@ -3,6 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
+<<<<<<< HEAD
       <class name="testCases.EmailConfigurationTest">
         <methods>
           <include name="loadConfig"/>
@@ -11,6 +12,16 @@
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.EmailConfigurationTest -->
+=======
+      <class name="testCases.LoginTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.LoginTest -->
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

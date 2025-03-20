@@ -1,4 +1,9 @@
 package action_Package;
+<<<<<<< HEAD
+=======
+import java.io.File;
+
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -52,5 +57,9 @@ public interface Action_Interface {
 	public boolean switchToNewWindow(WebDriver driver,String newURL);
     public boolean clear(WebElement ele);
     public void SendKeys(WebElement ele,String text);
+<<<<<<< HEAD
     public String getText(WebElement ele);
+=======
+    
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 }

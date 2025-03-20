@@ -38,7 +38,11 @@
 							<version>3.5.2</version>
 							<configuration>
 								<suiteXmlFiles>
+<<<<<<< HEAD
 									<suiteXmlFile>testng2.xml</suiteXmlFile>
+=======
+									<suiteXmlFile>testng.xml</suiteXmlFile>
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 								</suiteXmlFiles>
 							</configuration>
 						</plugin>
@@ -80,6 +84,7 @@
 			<artifactId>selenium-java</artifactId>
 			<version>4.22.0</version>
 		</dependency>
+<<<<<<< HEAD
 		
 		<dependency>
     <groupId>org.apache.logging.log4j</groupId>
@@ -87,6 +92,8 @@
     <version>2.20.0</version>
 </dependency>
 
+=======
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
@@ -120,11 +127,14 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.2</version>
 		</dependency>
+<<<<<<< HEAD
       <dependency>
     <groupId>ch.qos.logback</groupId>
     <artifactId>logback-classic</artifactId>
     <version>1.2.11</version>
 </dependency>
+=======
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v126 -->
@@ -160,7 +170,10 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.4.0</version>
 		</dependency>
+<<<<<<< HEAD
 		
+=======
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>

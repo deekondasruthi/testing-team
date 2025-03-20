@@ -18,7 +18,11 @@ public class LoginTest extends BaseClass {
 
 	@BeforeMethod()
 	public void setup() {
+<<<<<<< HEAD
 		launchApp("firefox");
+=======
+		launchApp("chrome");
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 
 	}
 	@Test

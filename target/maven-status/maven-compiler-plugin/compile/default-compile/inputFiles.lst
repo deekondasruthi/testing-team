@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Basispay\Desktop\1\src\main\java\dataProvider\DataProviderClass.java
 C:\Users\Basispay\Desktop\1\src\main\java\page_objects\HomePage.java
 C:\Users\Basispay\Desktop\1\src\main\java\page_objects\LoginPage.java
@@ -12,3 +13,12 @@ C:\Users\Basispay\Desktop\1\src\main\java\page_objects\mainMasterPage.java
 C:\Users\Basispay\Desktop\1\src\main\java\action_Package\Action_Interface.java
 C:\Users\Basispay\Desktop\1\src\main\java\action_driver\Action_class.java
 C:\Users\Basispay\Desktop\1\src\main\java\utilities\ListenerClass.java
+=======
+C:\Users\Basispay\Desktop\1\src\main\java\action_driver\Action_class.java
+C:\Users\Basispay\Desktop\1\src\main\java\action_Package\Action_Interface.java
+C:\Users\Basispay\Desktop\1\src\main\java\baseClass\BaseClass.java
+C:\Users\Basispay\Desktop\1\src\main\java\page_objects\HomePage.java
+C:\Users\Basispay\Desktop\1\src\main\java\page_objects\LoginPage.java
+C:\Users\Basispay\Desktop\1\src\main\java\utilities\DataProvider.java
+C:\Users\Basispay\Desktop\1\src\main\java\utilities\Reporter.java
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84

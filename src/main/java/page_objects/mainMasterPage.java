@@ -15,8 +15,11 @@ public class mainMasterPage extends BaseClass{
 	private WebElement clkHoli;
 	@FindBy(xpath = "//li[text()='Government Holiday ']")
 	private WebElement holi; 
+<<<<<<< HEAD
 	@FindBy(xpath = "//li[text()='Emails Configuration ']")
 	private WebElement emailconf; 
+=======
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 	
 	
 	public mainMasterPage() {
@@ -31,6 +34,7 @@ public class mainMasterPage extends BaseClass{
 		
 	}
 	
+<<<<<<< HEAD
 	public EmailConfiguartionPage valiEmailconfBtn() {
 		action.explicitWait(getDriver(), emailconf, 3);
 		action.click(getDriver(), emailconf);
@@ -39,6 +43,8 @@ public class mainMasterPage extends BaseClass{
 		
 	}
 	
+=======
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
 
 	
 }

@@ -12,6 +12,7 @@
           <include name="setup"/>
           <include name="HolidayCreationTest"/>
           <include name="tearDown"/>
+<<<<<<< HEAD
           <include name="SearchFuncTest"/>
           <include name="CreateReport"/>
         </methods>
@@ -25,6 +26,11 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.Mainmaster_hoidayTest -->
+=======
+          <include name="CreateReport"/>
+        </methods>
+      </class> <!-- testCases.HolidayTest -->
+>>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
     </classes>
   </test> <!-- basic tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->
