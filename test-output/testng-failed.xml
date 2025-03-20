@@ -6,13 +6,30 @@
   </listeners>
   <test thread-count="5" name="basic tests(failed)">
     <classes>
+      <class name="testCases.EmailConfigurationTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="emailcreationTest"/>
+          <include name="CreateReport"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.EmailConfigurationTest -->
+      <class name="testCases.LoginTest">
+        <methods>
+          <include name="loadConfig"/>
+          <include name="loginTest"/>
+          <include name="CreateReport"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.LoginTest -->
       <class name="testCases.HolidayTest">
         <methods>
           <include name="loadConfig"/>
           <include name="setup"/>
           <include name="HolidayCreationTest"/>
           <include name="tearDown"/>
-<<<<<<< HEAD
           <include name="SearchFuncTest"/>
           <include name="CreateReport"/>
         </methods>
@@ -21,16 +38,11 @@
         <methods>
           <include name="loadConfig"/>
           <include name="setup"/>
-          <include name="CreateReport"/>
           <include name="validateTheHoliBtnTest"/>
+          <include name="CreateReport"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testCases.Mainmaster_hoidayTest -->
-=======
-          <include name="CreateReport"/>
-        </methods>
-      </class> <!-- testCases.HolidayTest -->
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
     </classes>
   </test> <!-- basic tests(failed) -->
 </suite> <!-- Failed suite [Suite] -->

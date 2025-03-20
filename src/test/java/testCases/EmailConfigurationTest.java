@@ -25,7 +25,7 @@ public class EmailConfigurationTest extends BaseClass {
 	@BeforeMethod()
 
 	public void setup() throws InterruptedException {
-
+	Thread.sleep(5000);
 	launchApp("chrome");
 	loginPage = new LoginPage();
 	loginPage.Email("majeeth.h@babujiventures.in");

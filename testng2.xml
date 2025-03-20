@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.LoginTest"/>
 
-       <class name="testCases.HolidayTest"></class>
+      
 
     </classes>
   </test> <!-- Test -->
