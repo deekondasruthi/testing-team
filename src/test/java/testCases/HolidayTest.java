@@ -55,7 +55,7 @@ public class HolidayTest extends BaseClass {
 
 	}
 
-	@Test(dataProvider = "")
+	@Test(dataProvider = "Holidaysearchdata",dataProviderClass = DataProviderClass.class)
 	public void SearchFuncTest(String searchholi) {
 
 		boolean result = holidayPage.search(searchholi);

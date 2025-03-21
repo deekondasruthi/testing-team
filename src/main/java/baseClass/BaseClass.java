@@ -1,6 +1,5 @@
 package baseClass;
 
-
 import java.io.IOException;
 import java.time.Duration;
 
@@ -18,7 +17,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import utilities.Log;
 
 public class BaseClass {
-
 
 	// public static Properties prop;
 	public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -44,23 +42,17 @@ public class BaseClass {
 		// prop.load(ip);
 	}
 
-	
-	
-	
-
-
-	public  void launchApp(String browserName) {
-
+	public void launchApp(String browserName) {
 
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 
-			
-			//  options.addArguments("--headless"); // Enable headless mode
-			//  options.addArguments("--disable-gpu"); // Optional: Disable GPU rendering for compatibility
-			//    options.addArguments("--no-sandbox"); // Required for running in Jenkins
-			//    options.addArguments("--disable-dev-shm-usage"); // Reduce resource usage
+			// options.addArguments("--headless"); // Enable headless mode
+			// options.addArguments("--disable-gpu"); // Optional: Disable GPU rendering for
+			// compatibility
+			// options.addArguments("--no-sandbox"); // Required for running in Jenkins
+			// options.addArguments("--disable-dev-shm-usage"); // Reduce resource usage
 
 			driver.set(new ChromeDriver(options));
 		} else if (browserName.equalsIgnoreCase("FireFox")) {
@@ -77,7 +69,6 @@ public class BaseClass {
 			driver.set(new InternetExplorerDriver()); // Note: IE does not support headless mode
 		}
 
-
 		getDriver().manage().window().maximize();
 		// Delete all the cookies
 		getDriver().manage().deleteAllCookies();
@@ -92,12 +83,6 @@ public class BaseClass {
 
 	}
 
-
-
-		
-
-
-	
 	@AfterSuite
 	public void CreateReport() {
 		Log.info("Report start generated");

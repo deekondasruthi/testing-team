@@ -1,7 +1,5 @@
 package utilities;
 
-import java.io.File;
-
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
@@ -10,7 +8,6 @@ import com.aventstack.extentreports.Status;
 
 import action_driver.Action_class;
 import baseClass.BaseClass;
-import utilities.Reporter;
 
 public class ListenerClass extends Reporter implements ITestListener {
 

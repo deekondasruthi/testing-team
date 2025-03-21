@@ -1,8 +1,4 @@
 package action_Package;
-
-import java.io.File;
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -56,6 +52,5 @@ public interface Action_Interface {
 	public boolean switchToNewWindow(WebDriver driver,String newURL);
     public boolean clear(WebElement ele);
     public void SendKeys(WebElement ele,String text);
-
     public String getText(WebElement ele);
 }

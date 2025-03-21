@@ -1,0 +1,4 @@
+{"@timestamp":"2025-03-21T05:28:13.357Z","ecs.version":"1.2.0","log.level":"INFO","message":"This will run for configure the resources","process.thread.name":"main","log.logger":"utilities.Log"}
+{"@timestamp":"2025-03-21T05:28:13.727Z","ecs.version":"1.2.0","log.level":"INFO","message":"Report start generated","process.thread.name":"main","log.logger":"utilities.Log"}
+{"@timestamp":"2025-03-21T05:30:28.439Z","ecs.version":"1.2.0","log.level":"INFO","message":"This will run for configure the resources","process.thread.name":"main","log.logger":"utilities.Log"}
+{"@timestamp":"2025-03-21T05:31:05.290Z","ecs.version":"1.2.0","log.level":"INFO","message":"Report start generated","process.thread.name":"main","log.logger":"utilities.Log"}

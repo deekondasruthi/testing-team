@@ -3,25 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-<<<<<<< HEAD
-      <class name="testCases.EmailConfigurationTest">
+      <class name="testCases.HolidayTest">
         <methods>
           <include name="loadConfig"/>
-          <include name="emailcreationTest" invocation-numbers="0"/>
-          <include name="CreateReport"/>
           <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.EmailConfigurationTest -->
-=======
-      <class name="testCases.LoginTest">
-        <methods>
-          <include name="loadConfig"/>
-          <include name="loginTest"/>
+          <include name="SearchFuncTest" invocation-numbers="0 1"/>
           <include name="tearDown"/>
-          <include name="setup"/>
+          <include name="CreateReport"/>
         </methods>
-      </class> <!-- testCases.LoginTest -->
->>>>>>> dcb77796aad0418ada15a011dabf871566aaef84
+      </class> <!-- testCases.HolidayTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
